@@ -1,7 +1,7 @@
 // Part 1: an object with different data types
 const userProfile = {
-  name: "Mansur",
-  birthYear: 2005,
+  name: "Tleubay Abilmansur",
+  birthYear: 2007,
   isDeveloper: false,
   hobbies: ["Football", "Music", "Gaming"]
 };
