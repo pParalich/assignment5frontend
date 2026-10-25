@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Profile | Assignment 5</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="container">
+    <header>
+      <p class="small-title">WEB TECHNOLOGIES · ASSIGNMENT 5</p>
+      <h1>My Profile Page</h1>
+      <p>A simple website using JavaScript, DOM and events.</p>
+    </header>
+
+    <section class="card" id="profile-section">
+      <h2>Part 1 · Personal Information</h2>
+      <p><strong>Username:</strong> <span id="profile-name"></span></p>
+      <p><strong>Birth year:</strong> <span id="profile-year"></span></p>
+      <p><strong>Age:</strong> <span id="profile-age"></span></p>
+      <p><strong>Age in months:</strong> <span id="profile-months"></span></p>
+      <p><strong>Developer:</strong> <span id="profile-developer"></span></p>
+      <p><strong>Number of hobbies:</strong> <span id="profile-count"></span></p>
+    </section>
+
+    <section class="card">
+      <h2>Part 2 · Edit Profile</h2>
+      <form id="profile-form">
+        <label for="username">Username</label>
+        <input type="text" id="username" placeholder="Enter your name" required>
+        <label for="birth-year">Birth Year</label>
+        <input type="number" id="birth-year" placeholder="e.g. 2005" min="1900" required>
+        <button type="submit">Create / Update Profile</button>
+      </form>
+      <p id="message" aria-live="polite"></p>
+    </section>
+
+    <section class="card">
+      <h2>Part 3 · My Hobbies</h2>
+      <ul id="hobby-list"></ul>
+      <label for="new-hobby">New hobby</label>
+      <input type="text" id="new-hobby" placeholder="Enter a hobby">
+      <div class="buttons">
+        <button type="button" id="add-btn">Add Item</button>
+        <button type="button" id="remove-btn" class="secondary">Remove Item</button>
+      </div>
+      <p id="list-message" aria-live="polite"></p>
+    </section>
+    <footer>JavaScript Basics · DOM Manipulation & Events</footer>
+  </main>
+</body>
+</html>
