@@ -3,6 +3,7 @@
 **Student:** Tleubay Abilmansur  
 **Group:** SE2540  
 **GitHub:** [pParalich](https://github.com/pParalich)
+**Website"** https://pparalich.github.io/assignment5frontend/
 
 ## Description
 
