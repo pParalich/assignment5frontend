@@ -43,5 +43,44 @@ profileForm.addEventListener("submit", function(event) {
   document.getElementById("message").textContent = "Profile updated!";
 });
 
+// Part 3: add and remove list items using DOM
+const hobbyList = document.getElementById("hobby-list");
+const hobbyInput = document.getElementById("new-hobby");
+const listMessage = document.getElementById("list-message");
+
+function showHobbies() {
+  hobbyList.innerHTML = "";
+  for (let i = 0; i < userProfile.hobbies.length; i++) {
+    const item = document.createElement("li");
+    item.textContent = userProfile.hobbies[i];
+    hobbyList.appendChild(item);
+  }
+  document.getElementById("profile-count").textContent = userProfile.hobbies.length;
+}
+
+document.getElementById("add-btn").addEventListener("click", function() {
+  const newHobby = hobbyInput.value.trim();
+  if (newHobby === "") {
+    listMessage.textContent = "Enter a hobby first.";
+    return;
+  }
+
+  userProfile.hobbies.push(newHobby);
+  showHobbies();
+  hobbyInput.value = "";
+  listMessage.textContent = "Hobby added!";
+});
+
+document.getElementById("remove-btn").addEventListener("click", function() {
+  if (userProfile.hobbies.length === 0) {
+    listMessage.textContent = "The list is already empty.";
+    return;
+  }
+
+  userProfile.hobbies.pop();
+  showHobbies();
+  listMessage.textContent = "Last hobby removed!";
+});
 
 showProfile();
+showHobbies();
